@@ -10,4 +10,4 @@ COPY target/spring-boot-mongo-1.0.jar $PROJECT_HOME/spring-boot-mongo.jar
 
 WORKDIR $PROJECT_HOME
 
-CMD ["java" ,"-jar","./spring-boot-mongo.jar"]
+CMD ["java" ,"-jar","-Dspring.data.mongodb.uri=mondodb://mongo:27017/sping-mongo","Djava.security.egd=file:dev/./urandom","-jar"./spring-boot-mongo.jar"]
